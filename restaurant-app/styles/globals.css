@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-emerald-700 transition-colors duration-200 
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-slate-800 transition-colors duration-200 
+           focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden 
+           hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .spice-level-1 {
+    @apply text-green-600;
+  }
+
+  .spice-level-2 {
+    @apply text-yellow-600;
+  }
+
+  .spice-level-3 {
+    @apply text-orange-600;
+  }
+
+  .spice-level-4 {
+    @apply text-red-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
